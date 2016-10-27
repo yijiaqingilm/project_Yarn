@@ -132,12 +132,12 @@ gulp.task('sass', function() {
 	console.log(path);
 	return gulp.src(paths.sass)
 		.pipe(sass.sync().on('error', sass.logError))
-		.pipe(compass({
+		/*.pipe(compass({
 			config_file: path.join(process.cwd(), 'config.rb'),
 			project: path.join(process.cwd(), '/app'),
 			css: yeoman.app+'/styles',
 			sass: yeoman.app+'/sass'
-		}))
+		}))*/
 		.pipe(gulp.dest(yeoman.app + '/styles'));
 });
 gulp.task('sass_view', function() {
