@@ -12,11 +12,11 @@
     "mobile-angular-ui": "^1.2.1"
   },
   "devDependencies": {
+    "angular-bootstrap": "^2.1.4",
     "angular-mocks": "^1.4.0",
     "angular-ui-router": "^0.3.1",
-    "oclazyload": "^1.0.9",
-    "angular-bootstrap": "^2.1.4",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "oclazyload": "^1.0.9"
   },
   "appPath": "app",
   "moduleName": "angularMobileApp"
