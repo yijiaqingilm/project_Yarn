@@ -28,3 +28,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 		}
 	});
 }]);
+
+app.config(["$stateProvider",function($stateProvider){
+	
+}]);

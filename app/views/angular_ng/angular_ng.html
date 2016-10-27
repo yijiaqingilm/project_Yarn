@@ -1,85 +1,88 @@
-<div ui-content-for="title"> <span>angular ng test</span></div>
+<div ui-content-for="title"><span>angular ng test</span></div>
 <div class="scrollable">
-	<div class="scrollable-header">
-		this is test angular ng
-	</div>
-	<div class="scrollable-content section">
-		<!--<div id="div2" ng-controller="controller2">
-		</div>-->
-		<h1 class="slideInLeft bounce animated">Example</h1>
-		<div class="{{test_an}}">??? {{name}}</div>
-		<div ng-click="addAnimate()">出来</div>
-		<a>what??</a>
-		<div ng-click="go_anchor()">test_anchorScroll go go</div>
-		<form action="" novalidate="novalidate">
-			<input type="text" ng-model="user.name" ng-maxlength="5" ng-trim="true" name="" id="" value="" />
-			<div>{{user.name}}</div>
-			<div><input type="month" /></div>
-			<div><input type="email" /></div>
-			<div><input type="date" /></div>
-			<div><input type="url" /></div>
-			<div><input type="week" /></div>
+    <div class="scrollable-header">
+        this is test angular ng
+    </div>
+    <div class="scrollable-content section">
+        <!--<div id="div2" ng-controller="controller2">
+        </div>-->
+        <h1 class="slideInLeft bounce animated">Example</h1>
+        <div class="{{test_an}}">??? {{name}}</div>
+        <div ng-click="addAnimate()">出来</div>
+        <a>what??</a>
+        <div ng-click="go_anchor()">test_anchorScroll go go</div>
+        <form action="" novalidate="novalidate">
+            <input type="text" ng-model="user.name" ng-maxlength="5" ng-trim="true" name=""  value=""/>
+            <div>{{user.name}}</div>
+            <div><input type="month"/></div>
+            <div><input type="email"/></div>
+            <div><input type="date"/></div>
+            <div><input type="url"/></div>
+            <div><input type="week"/></div>
 
-			<div> 我来测试 ng if <input type="checkbox" ng-model="likes" ng-init="likes=true" />我的 爱好</div>
-			<div ng-if="likes">我来 看看 你的 爱好</div>
-			<div>我来 测试 ng list </div>
-			<div><input type="text" ng-model="arr" ng-list name="" id="" value="" /></div>
-			<div>{{arr}}</div>
+            <div> 我来测试 ng if <input type="checkbox" ng-model="likes" ng-init="likes=true"/>我的 爱好</div>
+            <div ng-if="likes">我来 看看 你的 爱好</div>
+            <div>我来 测试 ng list</div>
+            <div><input type="text" ng-model="arr" ng-list name="" id="" value=""/></div>
+            <div>{{arr}}</div>
 
-			<div>我来测试 ng nonbindable</div>
-			<div ng-non-bindable>{{arr}}</div>
+            <div>我来测试 ng nonbindable</div>
+            <div ng-non-bindable>{{arr}}</div>
 
-			<div>测试 ng open</div>
-			<details id="details" ng-open="likes">
-				<summary>Show/Hide me</summary>
-				<summary>Show/Hide m sssdddde</summary>
-				<summary>3</summary>
-				<summary>34</summary>
-			</details>
-			<summary>Show/Hide me</summary>
-			<details id="details" ng-open="likes">
-			</details>
+            <div>测试 ng open</div>
+            <details id="details" ng-open="likes">
+                <summary>Show/Hide me</summary>
+                <summary>Show/Hide m sssdddde</summary>
+                <summary>3</summary>
+                <summary>34</summary>
+            </details>
+            <summary>Show/Hide me</summary>
+            <details id="details" ng-open="likes">
+            </details>
 
-			<div>测试 只读性 <input type="text" ng-readonly="true" /></div>
-			<div>
-				<div>测试 循环 </div>
-				<div ng-repeat-start="obj in arr track by $index">
-					start {{obj}}
-				</div>
-				<div>
-					center {{obj}}
-				</div>
-				<div ng-repeat-end>
-					end {{obj}}
-				</div>
-			</div>
+            <div>测试 只读性 <input type="text" ng-readonly="true"/></div>
+            <div>
+                <div>测试 循环</div>
+                <div ng-repeat-start="obj in arr track by $index">
+                    start {{obj}}
+                </div>
+                <div>
+                    center {{obj}}
+                </div>
+                <div ng-repeat-end>
+                    end {{obj}}
+                </div>
+            </div>
 
-			<div>测试 ng transclude</div>
-			<div><input type="text" ng-model="title" ng-value="title2" name="" id="" value="" /></div>
-			<div>顺便 测试 ng value <input type="text" ng-model="title2" name="" id="" value="" /></div>
-			<textarea name="" ng-model="text" rows="" cols=""></textarea>
-			<pend title="{{title}}" text="text"><span>{{text}}</span></pend>
-			<div ng-click="curTpl='tpl1'">测试 ng script click me </div>
-			<script type="text/ng-template" id="tpl1">
-				我是 模板 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta!
-			</script>
-			<div ng-include="curTpl"></div>
-			<div id="test_anchorScroll">测试 anchorScrollProvider 服务 跳转到这里。</div>
+            <div >测试 ng transclude</div>
+            <div><input type="text" ng-model="title" ng-value="title2" name="" id="" value=""/></div>
+            <div>顺便 测试 ng value <input type="text" ng-model="title2" name="" id="" value=""/></div>
+            <textarea name="" ng-model="text" rows="" cols=""></textarea>
+            <pend title="{{title}}" text="text"><span>{{text}}</span></pend>
+            <div ng-click="curTpl='tpl1'">测试 ng script click me</div>
+            <script type="text/ng-template" id="tpl1">
+                我是 模板 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta!
+            </script>
+            <div ng-include="curTpl"></div>
+            <div id="test_anchorScroll">测试 anchorScrollProvider 服务 跳转到这里。</div>
 
-			<div>下面 我将 测试 directive</div>
-			<div><input type="text" ng-model="text_name" /></div>
-			<div my-directive action="go_anchor()" text-name="text_name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus totam aut non sint voluptatem natus rem quisquam laboriosam tempora nulla quae sit id eos laborum earum veritatis animi dolores in!</div>
-			
-			<div class="">目的 创建一个自定义指令 使其 输入框 只能 输入 数字 且  数字是  1-10之前</div>
-			<div><input type="text" supper-num fraction-num /></div>
-			<div>下面  是我的 超级 num</div>
-			
-		</form>
-		<img ng-src="images/yeoman.png" ng-srcset="images/btn_icon_buy.png 2x" />
+            <div>下面 我将 测试 directive</div>
+            <div><input type="text" ng-model="text_name"/></div>
+            <div my-directive action="go_anchor()" text-name="text_name">Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Delectus totam aut non sint voluptatem natus rem quisquam laboriosam tempora nulla
+                quae sit id eos laborum earum veritatis animi dolores in!
+            </div>
 
-	</div>
-	<div class="scrollable-footer">
+            <div class="">目的 创建一个自定义指令 使其 输入框 只能 输入 数字 且 数字是 1-10之前</div>
+            <div><input type="text" supper-num fraction-num/></div>
+            <div>下面 是我的 超级 num</div>
 
-	</div>
+        </form>
+        <img ng-src="images/yeoman.png" ng-srcset="images/btn_icon_buy.png 2x"/>
+
+    </div>
+    <div class="scrollable-footer">
+
+    </div>
 
 </div>
