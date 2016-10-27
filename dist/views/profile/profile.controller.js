@@ -1,0 +1,1 @@
+!function(){function o(o){var l=/<[a-zA-Z]+>([\s\S])*<\/[a-zA-Z]+>?/;return o=o.replace(l,"")}angular.module("angularMobileApp").controller("profileController",["$scope",function(l){console.log("this is my profile controller");var a="<c>asdfasdf</c><b>asdfasdf</b><b>asdfasdf</b>这是文字<b>asdfasdf</b>123",n=o(a);console.log("xxx"),console.log(n)}])}();

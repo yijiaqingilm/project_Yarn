@@ -1,0 +1,1 @@
+!function(){"use strict";angular.module("angularMobileApp").controller("closureController",["$scope",function(o){function n(){function o(){}return o}var l=n();console.log(l),l()}])}();

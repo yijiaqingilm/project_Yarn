@@ -1,0 +1,38 @@
+<div ui-content-for="title">
+	<span>Tabs</span>
+</div>
+
+<div class="scrollable">
+	<div class="scrollable-content">
+		<div class='section'>
+			<ui-state id='activeTab' default='1'></ui-state>
+			<ul class="nav-tabs nav fs-12">
+				<li  ui-class="{'active':activeTab==1}"> 
+					<a  ui-set="{'activeTab':1}">table 1</a>
+				</li>
+				<li ui-class="{'active':activeTab==2}">
+					<a ui-set="{activeTab:'2'}">表格 2</a>
+				</li>
+				<li ui-class="{active:activeTab==3}">
+					<a ui-set="{activeTab:3}">table 3</a>
+				</li>
+			</ul>
+			<div ui-if="activeTab==1">
+				我是 表格1
+			</div>
+			<div ui-if="activeTab==2">
+				我是 表格2
+			</div>
+			<div ui-if="activeTab==3">
+				我是 表格3
+			</div>
+			
+			<div class="btn-group justified">
+				<div class="btn btn-default " ui-set="{activeTab:1}" ui-class="{active:activeTab==1}">table 1</div>
+				<div class="btn btn-default"  ui-set="{activeTab:2}" ui-class="{active:activeTab==2}">table 2</div>
+				<div class="btn btn-default"  ui-set="{activeTab:3}" ui-class="{active:activeTab==3}">table 3</div>
+			</div>
+		</div>
+
+	</div>
+</div>

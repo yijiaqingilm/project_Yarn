@@ -1,0 +1,6 @@
+<div class="col-xs-12 border-fa list-group">
+	空的：{{curType}} <uiState uiState="books"></uiState>
+	<div ng-repeat="type in booktype" class="list-group-item"  ui-class="{'active':curType=={{$index}}}" >
+		<a ui-sref="bookHome({bookType:{{$index}}})" >{{type}} {{$index}}</a>
+	</div>
+</div>

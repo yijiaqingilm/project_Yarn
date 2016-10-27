@@ -1,0 +1,1 @@
+app.config(["$stateProvider","$urlRouterProvider",function(e,o){e.state("closure",{url:"/closure",templateUrl:"views/closure/closure.html",controller:"closureController",resolve:{loadMyRes:["$ocLazyLoad",function(e){return e.load({files:[{type:"js",path:"views/closure/closure.controller.js"},{type:"css",path:"views/closure/closure.css"}]})}]}})}]);
