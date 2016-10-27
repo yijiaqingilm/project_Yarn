@@ -1,0 +1,87 @@
+<div class="scrollable">
+	<div class="scrollable-header"></div>
+	<div class="scrollable-content section ">
+		<div id="focus" touchslide autoPlay="false"  class="focus">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<a><img src="images/tb1.jpg" /></a>
+					</li>
+					<li>
+						<a><img src="images/tb2.jpg" /></a>
+					</li>
+					<li>
+						<a><img src="images/tb3.jpg" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="focus2" touchslide  autoPlay="true" class="focus">
+			<div class="hd">
+				<ul></ul>
+			</div>
+			<div class="bd">
+				<ul>
+					<li>
+						<a><img src="images/tb1.jpg" /></a>
+					</li>
+					<li>
+						<a><img src="images/tb2.jpg" /></a>
+					</li>
+					<li>
+						<a><img src="images/tb3.jpg" /></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div>
+				<p>我是超过两行的标题最后点号省略我是超过两行的标题最后点号省略asdfasdfsad是超过两行的标题最后点号省略我是超过两行的标题最后点号省略asdfasdfsad</p>
+			</div>
+		</div>
+
+		<div ng-swipe-left='left()' ng-swipe-right="right()">test 滑动 </div>
+		{{direction}}
+
+		<div class="touch_content " toucharea>
+			{{touch.direction}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo iusto mollitia odit voluptatem vel. Excepturi ipsum aut repellendus harum omnis laboriosam sunt! Blanditiis asperiores placeat odio quam inventore autem officiis doloribus reiciendis ex cum architecto error molestias expedita dolorem beatae facere vel omnis exercitationem nulla illo eum saepe voluptates tenetur.
+		</div>
+
+		<div class="touch_content" toucharea-test>
+			{{touchTo}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo possimus!
+		</div>
+		asdf
+		<test-title title="为丰富"></test-title>
+		<!--<div class="touch_content">
+			<super-man strenth>我有 力量</super-man>
+		</div>
+		<div class="touch_content">
+			<super-man strenth speed>我有 力量+敏捷</super-man>
+		</div>
+		<div class="touch_content">
+			<super-man strenth speed light>我有 力量+敏捷+发光</super-man>
+		</div>-->
+
+		<div class="">??</div>
+		<accordion>
+			<expand title="我是标题">
+				<div ng-repeat="item in items">{{item}}</div>
+			</expand>
+			<br />
+			<expand title="我是标题2">
+				<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus ipsam?</div>
+			</expand>
+			<br />
+			<expand title="我是标题3">
+				<div>Lorem ipsum dolor sit amet.</div>
+				<div>Lorem ipsum dolor sit amet, consectetur.</div>
+			</expand>
+		</accordion>
+
+	</div>
+	<div class="scrollable-footer"></div>
+</div>

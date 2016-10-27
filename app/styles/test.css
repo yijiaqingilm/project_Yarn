@@ -1,0 +1,24 @@
+/* line 1, ../sass/test.scss */
+.test {
+  color: red;
+}
+
+/* line 5, ../sass/test.scss */
+.lightbulb {
+  border: 1px solid gold;
+  /*no*/
+  width: 100%;
+  font-size: 80px;
+  /*px*/
+}
+
+/* line 10, ../sass/test.scss */
+.fs-12 {
+  font-size: 12px;
+  /*px*/
+}
+
+/* line 13, ../sass/test.scss */
+.t {
+  color: green;
+}

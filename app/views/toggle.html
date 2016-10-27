@@ -1,0 +1,23 @@
+<div ui-content-for="title">
+	<span>Toggle 123</span>
+</div>
+
+<div class="scrollable">
+	<div class="scrollable-header">
+		toggle header
+	</div>
+	<div class="scrollable-content section section-break">
+		zhong jian
+		<p class="text-center f lightbulb" ui-state ui-default='true' id='lightbulb' ui-class="{'text-primary':lightbulb}">
+			<i class="fa fa-lightbulb-o "></i>
+		</p>
+		<div class="btn-group justified">
+			<a ui-toggle='lightbulb' ui-class="{'active ':lightbulb}" class="btn btn-default ">toggle</a>
+			<a ui-turn-on='lightbulb' ui-class="{'active':lightbulb}" class="btn btn-default">trun on</a>
+			<a ui-turn-off='lightbulb' ui-class="{'active':!lightbulb}" class="btn btn-default">trun off</a>
+		</div>
+	</div>
+	<div class="scrollable-footer">
+		toggle footer
+	</div>
+</div>

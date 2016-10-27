@@ -1,0 +1,52 @@
+<html>
+  <body>
+    <script language=javascript>
+      var txt='<c>a</c>b<b>a</b>d';
+
+      var re1='(<)';	// Any Single Character 1
+      var re2='([a-z])';	// Any Single Word Character (Not Whitespace) 1
+      var re3='(>)';	// Any Single Character 2
+      var re4='([a-z])';	// Any Single Word Character (Not Whitespace) 2
+      var re5='(<)';	// Any Single Character 3
+      var re6='(\\/)';	// Any Single Character 4
+      var re7='([a-z])';	// Any Single Word Character (Not Whitespace) 3
+      var re8='(>)';	// Any Single Character 5
+      var re9='([a-z])';	// Any Single Word Character (Not Whitespace) 4
+      var re10='(<)';	// Any Single Character 6
+      var re11='([a-z])';	// Any Single Word Character (Not Whitespace) 5
+      var re12='(>)';	// Any Single Character 7
+      var re13='([a-z])';	// Any Single Word Character (Not Whitespace) 6
+      var re14='(<)';	// Any Single Character 8
+      var re15='(\\/)';	// Any Single Character 9
+      var re16='([a-z])';	// Any Single Word Character (Not Whitespace) 7
+      var re17='(>)';	// Any Single Character 10
+      var re18='([a-z])';	// Any Single Word Character (Not Whitespace) 8
+
+      var p = new RegExp(re1+re2+re3+re4+re5+re6+re7+re8+re9+re10+re11+re12+re13+re14+re15+re16+re17+re18,["i"]);
+      console.log(p)
+      var m = p.exec(txt);
+      if (m != null)
+      {
+          var c1=m[1];
+          var w1=m[2];
+          var c2=m[3];
+          var w2=m[4];
+          var c3=m[5];
+          var c4=m[6];
+          var w3=m[7];
+          var c5=m[8];
+          var w4=m[9];
+          var c6=m[10];
+          var w5=m[11];
+          var c7=m[12];
+          var w6=m[13];
+          var c8=m[14];
+          var c9=m[15];
+          var w7=m[16];
+          var c10=m[17];
+          var w8=m[18];
+          document.write("("+c1.replace(/</,"&lt;")+")"+"("+w1.replace(/</,"&lt;")+")"+"("+c2.replace(/</,"&lt;")+")"+"("+w2.replace(/</,"&lt;")+")"+"("+c3.replace(/</,"&lt;")+")"+"("+c4.replace(/</,"&lt;")+")"+"("+w3.replace(/</,"&lt;")+")"+"("+c5.replace(/</,"&lt;")+")"+"("+w4.replace(/</,"&lt;")+")"+"("+c6.replace(/</,"&lt;")+")"+"("+w5.replace(/</,"&lt;")+")"+"("+c7.replace(/</,"&lt;")+")"+"("+w6.replace(/</,"&lt;")+")"+"("+c8.replace(/</,"&lt;")+")"+"("+c9.replace(/</,"&lt;")+")"+"("+w7.replace(/</,"&lt;")+")"+"("+c10.replace(/</,"&lt;")+")"+"("+w8.replace(/</,"&lt;")+")"+"\n");
+      }
+    </script>
+  </body>
+</html>

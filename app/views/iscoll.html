@@ -1,0 +1,40 @@
+<ui-state id='searchBar' default='true'></ui-state>
+<div class="scrollable"  >
+	<div class="scrollable-header" ui-toggle="searchBar">我是 头部 </div>
+	<div class="scrollable-content section" ui-scroll-bottom="loadMove()">
+		<div ui-yeield-to="title"> 测试  占位符</div>
+		<div>"?????"</div>
+		<div ui-content-for="title"> <span>My View Title</span></div>
+		<div>????</div>
+		<ul ui-class="{'active': myId == '1'}" ui-outer-click="outerClick()" ui-outer-click-if="false">
+			<li>
+				<div >测试 ui-outer-click</div>
+			</li>
+			<li>
+				why
+			</li>
+			<li>
+				why
+			</li>
+			<li>
+				why
+			</li>
+			<li>
+				
+			</li>
+			<li ng-repeat="value in demo.items track by $index"  >
+				{{value}}
+			</li>
+			<li ng-repeat="info in data track by $index">
+				{{info.type}}
+			</li>
+			<li>上拉加载</li>
+		</ul>
+	</div>
+	
+	
+	<div class="scrollable-footer" ui-toggle="myId">我是尾部 <span ui-hide="searchBar">hide </span>
+		<div ui-if="myId==true">测试 uiif</div>
+	</div>
+	
+</div>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="description" content="">
+		<meta content="email=no" name="format-detection" />
+		<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" type="text/css" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
+		<link rel="stylesheet" type="text/css" href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>
+		<link rel="stylesheet" type="text/css" href="../bower_components/animate.css/animate.css"/>
+		<!-- build:css styles/t.css-->
+		<!-- endbuild-->
+		<!-- build:css styles/vendor.css -->
+		<!-- bower:css -->
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/reset.css" />
+		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/test.css" />
+		<!-- endbuild -->
+	</head>
+
+	<body ng-app="angularMobileApp">
+		<!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+		<!-- Sidebars -->
+		<!-- Sidebars -->
+		<div ng-include="'views/template/sidebar.html'" ui-track-as-search-param='true' class="sidebar sidebar-left"></div>
+
+		<div ng-include="'views/template/sidebar.html'" class="sidebar sidebar-right"></div>
+
+		<div class="app" ui-swipe-right='Ui.turnOn("uiSidebarLeft")' ui-swipe-left='Ui.turnOff("uiSidebarLeft")'>
+
+			<!-- Navbars -->
+
+			<div class="navbar navbar-app navbar-absolute-top">
+				<div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+					Mobile Angular UI
+				</div>
+				<div class="btn-group pull-left">
+					<div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+						<i class="fa fa-bars"></i> Menu 
+					</div>
+				</div>
+				<div class="btn-group pull-right" ui-yield-to="navbarAction">
+					<div ui-toggle="uiSidebarRight" class="btn">
+						<i class="fa fa-comment"></i> Chat
+					</div>
+				</div>
+			</div>
+
+			<div class="navbar navbar-app navbar-absolute-bottom">
+				<div class="btn-group justified">
+					<a href="/docs" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Docs</a>
+					<a href="https://github.com/mcasimir/mobile-angular-ui" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Sources</a>
+					<a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Issues</a>
+				</div>
+			</div>
+
+			<!-- App Body -->
+			<div class="app-body" ng-class="{loading: loading}">
+				<div ng-show="loading" class="app-content-loading">
+					<i class="fa fa-spinner fa-spin loading-spinner"></i>
+				</div>
+				<div class="app-content" ui-view="">
+
+				</div>
+			</div>
+
+		</div>
+		<!-- ~ .app -->
+
+		<!-- Modals and Overlays -->
+		<div ui-yield-to="modals"></div>
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		<script>
+			! function(A, n, g, u, l, a, r) {
+				A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+						(A[l].q = A[l].q || []).push(arguments)
+					}, A[l].l = +new Date, a = n.createElement(g),
+					r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+			}(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+			ga('create', 'UA-XXXXX-X');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-touch/angular-touch.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		<script type="text/javascript" src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.js"></script>
+		<script type="text/javascript" src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.gestures.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+		<script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:js scripts/scripts.js -->
+		<script src="scripts/common/flexible.js"></script>
+		<script src="scripts/lib/TouchSlide.1.0.source.js"></script>
+		<script src="scripts/common/common.js"></script>
+		<script src="scripts/services/commonService.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/overlayCtrl.js"></script>
+		<script src="scripts/controllers/flexCtrl.js"></script>
+		<script src="scripts/directives/my_directive.js"></script>
+		<script src="scripts/controllers/carouselCtrl.js"></script>
+		<script src="scripts/controllers/ModalCtrl.js"></script>
+		
+		
+		<!-- 模块加载 路由配置-->
+		<script src="views/profile/profile.router.js"></script>
+		<script src="views/angular_ng/angular_ng.router.js"></script>
+		<script src="views/touch/touch.router.js"></script>
+		<script src="views/closure/closure.router.js"></script>
+		<script src="views/bookStore/bookStore.router.js"></script>
+		
+		<!-- endbuild -->
+		
+		
+	</body>
+
+</html>
