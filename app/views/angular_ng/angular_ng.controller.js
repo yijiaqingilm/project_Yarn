@@ -1,6 +1,10 @@
 (function() {
 	"use strict";
 	angular.module("angularMobileApp");
+	console.log("why ");
+	console.log(app);
+	console.log("xx");
+	console.log("xxxx");
 
 	app.config(["$anchorScrollProvider", function($anchorScrollProvider) {
 		//console.log($anchorScrollProvider);
