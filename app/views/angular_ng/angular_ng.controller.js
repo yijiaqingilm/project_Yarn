@@ -5,6 +5,7 @@
 	console.log(app);
 	console.log("xx");
 	console.log("xxxx");
+	console.log("hello word");
 
 	app.config(["$anchorScrollProvider", function($anchorScrollProvider) {
 		//console.log($anchorScrollProvider);
