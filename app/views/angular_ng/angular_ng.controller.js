@@ -6,7 +6,7 @@
 	console.log("xx");
 	console.log("xxxx");
 	console.log("hello word");
-
+	console.log("wodetian")
 	app.config(["$anchorScrollProvider", function($anchorScrollProvider) {
 		//console.log($anchorScrollProvider);
 		//$anchorScrollProvider.disableAutoScrolling();
