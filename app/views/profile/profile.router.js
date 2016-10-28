@@ -1,7 +1,15 @@
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
 	$stateProvider.state("profile", {
 		url: '/profile',
-		templateUrl: 'views/profile/profile.html',
+		views:{
+			
+			'aaa':{
+				templateUrl:'views/aaa.html'
+			},
+			'':{
+				templateUrl: 'views/profile/profile.html'
+			}
+		},
 		controller: 'profileController',
 		resolve: {
 			loadMyRes: ['$ocLazyLoad', function($ocLazyLoad) {

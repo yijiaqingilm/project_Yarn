@@ -9,7 +9,7 @@
 
         console.log("this is my booke type list  controller");
 
-        console.log($scope.stateParams)
+        console.log($scope.stateParams);
         $scope.booktype = ["全部", "计算机", "金融", "治学", "高端办公"];
         SharedState.initialize($scope, "curType");
         SharedState.setOne("curType", $scope.stateParams.bookType);
