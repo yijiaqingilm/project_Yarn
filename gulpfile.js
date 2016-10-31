@@ -138,11 +138,13 @@ gulp.task('sass', function() {
 			css: yeoman.app+'/styles',
 			sass: yeoman.app+'/sass'
 		}))*/
+		.pipe(px2rem())
 		.pipe(gulp.dest(yeoman.app + '/styles'));
 });
 gulp.task('sass_view', function() {
 	return gulp.src(paths.sass_view)
 		.pipe(sass.sync().on('error', sass.logError))
+		.pipe(px2rem())
 		.pipe(gulp.dest(yeoman.app + '/views'));
 });
 
@@ -209,7 +211,7 @@ gulp.task('client:build', ['html', 'styles'], function() {
 		.pipe($.uglify())
 		.pipe(jsFilter.restore())
 		.pipe(cssFilter)
-		.pipe(px2rem())
+		/*.pipe(px2rem())*/
 		.pipe($.minifyCss({
 			cache: true
 		}))
@@ -234,7 +236,7 @@ gulp.task('view_style', function() {
 		.pipe($.uglify())
 		.pipe(jsFilter.restore())
 		.pipe(cssFilter)
-		.pipe(px2rem())
+		/*.pipe(px2rem())*/
 		.pipe($.minifyCss({
 			cache: true
 		}))
