@@ -67,24 +67,22 @@ commonModule.config(["$provide", "$httpProvider", function($provide, $httpProvid
 		
 		return {
 			'request': function(config) {
-				console.log(config);
-				console.log("this is  httpInterceptor");
+
+				console.group("开始请求");
 				return config;
 			},
 			'requestError': function(rejection) {
-				console.log(rejection);
+				console.log("请求  报错");
 				
-				console.log("this is httpInterceptor httpinterceptor rejection");
 				return $q.reject(rejection);
 			},
 			'response': function(response) {
-				console.log("this is httpInterceptor response response");
+				console.log("成功返回");
 				return response;
 
 			},
 			'responseError': function(rejection) {
-				console.log("this is httpInterceptor responseError responseError");
-				console.log(rejection)
+				console.log("请求 返回 报错");
 				switch(rejection.status) {
 					case 404:
 						console.log("this is  404");

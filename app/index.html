@@ -6,8 +6,8 @@
 		<title></title>
 		<meta name="description" content="">
 		<meta content="email=no" name="format-detection" />
-		<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--<meta name="flexible" content="initial-dpr=2,maximum-dpr=3" />-->
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="stylesheet" type="text/css" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
 		<link rel="stylesheet" type="text/css" href="../bower_components/angular-bootstrap/ui-bootstrap-csp.css"/>
@@ -69,14 +69,8 @@
 				<div ng-show="loading" class="app-content-loading">
 					<i class="fa fa-spinner fa-spin loading-spinner"></i>
 				</div>
-				
-				<div  ui-view="">
+				<div  class="app-content ng-scope" ui-view=""></div>
 
-				</div>
-				<div ui-view="aaa">
-					
-				</div>
-				
 			</div>
 
 		</div>
