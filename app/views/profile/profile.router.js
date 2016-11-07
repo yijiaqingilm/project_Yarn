@@ -13,19 +13,19 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         resolve: {
             loadMyRes: ['$ocLazyLoad', function ($ocLazyLoad) {
                 //return $ocLazyLoad.load('views/profile/profile.controller.js');
-                return $ocLazyLoad.load([].concat(myRes));
+                return $ocLazyLoad.load([/*{type: 'js', path: 'scripts/lib/underscore.js'}*/].concat(myRes));
             }],
             test: function () {
                 console.log("this  is   profile  test ")
             }
         }
-    }).state("usercenter", {
-        url: '/usercenter/:id',
+    }).state("profile.usercenter", {
+        url: '/usercenter/{sort}?from&to',
         templateUrl: 'views/profile/usercenter.html',
         controller: 'usercenterControler',
         resolve: {
             loadMyRes: ['$ocLazyLoad', function ($ocLazyLoad) {
-                return $ocLazyLoad.load([].concat(myRes));
+                return $ocLazyLoad.load([/*{type: 'js', path: 'scripts/lib/myUnderscore.js'}*/].concat(myRes));
             }]
         }
     });

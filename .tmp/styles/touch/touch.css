@@ -1,50 +1,60 @@
 @charset "UTF-8";
+
 p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical; }
+  -webkit-box-orient: vertical;
+}
 
 .focus {
-  width: 320px;
-  height: 150px;
+  width: 4.266667rem;
+  height: 2rem;
   margin: 0 auto;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .focus .hd {
   width: 100%;
-  height: 5px;
+  height: 0.066667rem;
   position: absolute;
   z-index: 1;
   bottom: 0;
-  text-align: center; }
+  text-align: center;
+}
 
 .focus .hd ul {
   overflow: hidden;
   display: -moz-box;
   display: -webkit-box;
   display: box;
-  height: 5px;
-  background-color: rgba(51, 51, 51, 0.5); }
+  height: 0.066667rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
 
 .focus .hd ul li {
   -moz-box-flex: 1;
   -webkit-box-flex: 1;
-  box-flex: 1; }
+  box-flex: 1;
+}
 
 .focus .hd ul .on {
-  background: #FF4000; }
+  background: #FF4000;
+}
 
 .focus .bd {
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+}
 
 .focus .bd li img {
   width: 100%;
-  height: 150px; }
+  height: 2rem;
+}
 
 .focus .bd li a {
   -webkit-tap-highlight-color: transparent;
-  /* 取消链接高亮 */ }
+  /* 取消链接高亮 */
+}

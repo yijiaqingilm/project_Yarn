@@ -47,7 +47,8 @@ app.config(function() {
 
 	}])
 	.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
-		$urlRouterProvider.otherwise("/404");
+		$urlRouterProvider.when("","/home");
+        $urlRouterProvider.otherwise("/404");
 		$stateProvider.state("home", {
 			url: '/home',
 			templateUrl: 'views/main.html'

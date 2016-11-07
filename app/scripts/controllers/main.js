@@ -71,7 +71,10 @@
 
 		console.log(SharedState.has("myId3"));
 
+        console.log(SharedState.get("myId2"));
 		console.log(SharedState.referenceCount("myId2") + "count");
+        console.log(SharedState.get("myId2"));
+
 
 		SharedState.setOne("myId", "test");
 		console.log(SharedState.eq("myId", "test"))

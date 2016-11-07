@@ -12,19 +12,17 @@
                                     <!--<span class="auth_unread"><img src="images/new/pic_new.png"></span>-->
 								</span>
                             </div>
-                            <div class="text-color mt-02">名片管理</div>
+                            <div class="text-color mt-02" ng-click="back()">返回上级</div>
                         </a>
                     </div>
                     <div class="col-xs-3">
-                        <a onclick="setOldRemind(3,'../member/myAsset/myAsset_list.html?objType=1')">
-                            <div>
+                        <div>
 								<span class="relative inline-block" id="module3">
 									<img src="images/new/ico_money.png" alt="" class="auth_list_icon"/>
                                     <!--<span class="auth_unread"><img src="images/new/pic_new.png"></span>-->
 								</span>
-                            </div>
-                            <div class="text-color mt-02">现金收支</div>
-                        </a>
+                        </div>
+                        <div class="text-color mt-02" ng-click="getState()">现金收支</div>
                     </div>
                     <div class="col-xs-3">
                         <a onclick="setOldRemind(4,'../member/myAsset/myCredits_list.html')">
@@ -95,7 +93,7 @@
                             <span class="gt"></span>
                         </div>
                     </div>
-                    <div class="auth_li row " id="myShare"
+                    <div class="auth_li row "
                          onclick="location.href='../member/myCenter/collect.html'">
                         <div class="col-xs-8">
                             <img src="images/new/xing.png" alt="" class="auth_li_icon"/>
@@ -126,6 +124,36 @@
                         </div>
                     </div>
 
+                    <div style="border: 1px solid green;">我的天啊。</div>
+
+                    <div style="border: 0.5px solid green;margin-top: 50px">我的天啊。</div>
+
+                    <div style="border: 2px solid green;margin-top: 50px">我的天啊。</div>
+                    <div> 测试一下 共享状态</div>
+                    <div ui-state id="myName"></div>
+
+                    <div ui-if="myName=='lanlan'">
+                        我要 显示 看看
+                    </div>
+                    <div ui-show="myName=='lanlan'"> 测试 ui show</div>
+                    <div>{{myName}}</div>
+                    <div ui-class="{'text-color-red':myName=='lanlan'}" class="text-left ">haha</div>
+
+                    <div ui-set="{myName:'yijiaiqng'}">改变 一下 my name 的 值</div>
+
+                    <div>测试 开关 mySwitch</div>
+
+                    <div ui-turn-on="mySwitch">开</div>
+                    <div ui-turn-off="mySwitch">关</div>
+                    <div ng-click="changeSwitch()">开关</div>
+
+                    <div ui-class="{'text-color-red':mySwitch}" class="">我的 颜色</div>
+
+                    <div>新建一个 组件 用于 判断 input 输入的值 是正确的 (输入框里面字数的计数) 对象字面量实现方式</div>
+                    <div><input type="text" id="test_input" value="我是数据坑"></div>
+
+                    <div>新建一个 组件 用于 判断 input 输入的值 是正确的 (输入框里面字数的计数) 闭包实现方式</div>
+                    <div><input type="text" id="test_input2" value="我是数据坑"></div>
                 </div>
 
                 <div class="footer_h">

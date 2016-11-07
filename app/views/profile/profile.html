@@ -1,4 +1,14 @@
 this  is  my  home
-<li class="profile"><b>asdfasdf</b>这是文字<li>
+<li class="profile"><b>asdfasdf</b>这是文字
+<li>
 
- <div ui-sref="usercenter({id:123})">goto  user center  {{myName}}</div>
+    <div ui-sref="profile.usercenter({id:123})">goto user center {{myName}}</div>
+
+
+    <div ui-sref="profile.usercenter({sort:'desc',from:10,to:30})">goto user center {{myName}}</div>
+
+
+    <div ng-click="goUserCenter()"> go to user center</div>
+
+
+    <div ui-view></div>
