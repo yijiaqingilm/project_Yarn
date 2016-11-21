@@ -15,8 +15,8 @@ var compass = require('gulp-compass');
 var fontSpider=require('gulp-font-spider');
 var browserSync = require('browser-sync').create();
 var proxyMiddleware = require('http-proxy-middleware');
-var proxy = proxyMiddleware(['/user', '/passport'], {
-    target: 'http://www.indmen.com',
+var proxy = proxyMiddleware(['/renyimen/m'], {
+    target: 'http://zk.3tichina.com:80',
     changeOrigin: true
 });
 px2rem({

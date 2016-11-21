@@ -67,6 +67,7 @@
 
     //匹配网站地址
     c.filterUrl = function (url) {
+
         var rex = /^https?:\/\/(([a-zA-Z0-9_-])+(\.)?)*(:\d+)?(\/((\.)?(\?)?=?&?[a-zA-Z0-9_-](\?)?)*)*$/i;
         if (url.match(rex)) {
             return true;

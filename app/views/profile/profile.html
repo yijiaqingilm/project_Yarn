@@ -1,14 +1,69 @@
-this  is  my  home
-<li class="profile"><b>asdfasdf</b>这是文字
-<li>
+<div class="scrollable">
+    <div class="scrollable-header"></div>
+    <div class="scrollable-content section">
 
-    <div ui-sref="profile.usercenter({id:123})">goto user center {{myName}}</div>
-
-
-    <div ui-sref="profile.usercenter({sort:'desc',from:10,to:30})">goto user center {{myName}}</div>
+        <div class="container-fluid">
+                <div ui-sref="profile.usercenter({id:123})">goto user center {{myName}}</div>
 
 
-    <div ng-click="goUserCenter()"> go to user center</div>
+                <div ui-sref="profile.usercenter({sort:'desc',from:10,to:30})">goto user center {{myName}}</div>
 
 
-    <div ui-view></div>
+                <div ng-click="goUserCenter()"> go to user center</div>
+
+
+                <div ui-view></div>
+
+                <div>
+                    <img src="images/1.jpg" class="img-responsive" alt="">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-primary">Like<i class="fa fa-taxi"></i></button>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-info">info <i class="fa fa-info-circle"></i></button>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-danger">Del</button>
+                        </div>
+                    </div>
+
+                    <div>thing cats <span class="text-danger">love </span></div>
+
+                    <div>
+                        <form action="" class="">
+                            <input type="text" placeholder="请输入" class="form-control">
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label for=""><input type="text" class="form-control"></label>
+                                </div>
+                                <div class="col-xs-6"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">提交 <i class="fa fa-paper-plane"></i></button>
+                            <h3 class="text-center text-primary">Jquery play</h3>
+                            <div class="row">
+
+                                <div class="col-xs-6 well">
+                                    <h4>target left</h4>
+                                    <button class="btn btn-default animated bounce">target1</button>
+                                    <button class="btn btn-default">target2</button>
+                                    <button class="btn btn-default">target3</button>
+                                </div>
+                                <div class="col-xs-6 well">
+                                    <h4>target right</h4>
+                                    <button class="btn btn-default">target4</button>
+                                    <button class="btn btn-default">target5</button>
+                                    <button class="btn btn-default">target6</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+        </div>
+    </div>
+    <div class="scrollable-footer"></div>
+</div>
+
